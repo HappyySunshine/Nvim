@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.api.nvim_set_keymap("n", "<C-s>", ":wa!<CR>", { noremap = true })
-
+vim.keymap.set("n", ",", "<Esc>")
 vim.keymap.set("i", "<C-l>", "<Del>")
 vim.keymap.set("i", "<C-s>", "<Down>")
 vim.keymap.set("i", "<C-w>", "<Up>")
@@ -39,7 +39,6 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-
 vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>mx", "<cmd>!chmod +x %<CR>", { silent = true })
@@ -48,7 +47,7 @@ vim.keymap.set("n", "<leader>gnp", "<cmd>g ~/.config/nvim/lua/nick/packerCR>")
 --vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+	vim.cmd("so")
 end)
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true })
@@ -56,9 +55,14 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true })
 
--- Create a horizontal split with <leader>/
-vim.api.nvim_set_keymap('n', '<leader>/', ':vsplit<CR>', { noremap = true })
+-- Create a horizontal splitader>/', ':vsplit<CR>', { noremap = true })
 
 -- Create a vertical split with <leader>-
-vim.api.nvim_set_keymap('n', '<leader>-', ':split<CR>', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>-", ":split<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>/", ":vsplit<CR>", { noremap = true })
 
+vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>" , { silent = true })
+
+vim.keymap.set( "n", "<S-h>", vim.cmd.CommentToggle , { silent = true })
+vim.keymap.set( "v", "<S-h>", ":'<,'>CommentToggle<CR>" , { silent = true })
+vim.cmd(":tnoremap <Esc> <C-\\><C-n>")

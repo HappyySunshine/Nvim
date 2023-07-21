@@ -1,6 +1,6 @@
 vim.opt.nu = true
-vim.opt.relativenumber = true
 
+vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -27,4 +27,20 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn =""
+vim.opt.colorcolumn = ""
+-- " Vim
+-- vim.g.indentLine_color_term = 239
+
+-- " GVim
+vim.g.indentLine_color_gui = '#fff480'
+
+-- " none X terminal
+-- vim.g.indentLine_color_tty_light = 7
+-- vim.g.indentLine_color_dark = 1
+                    
+                            
+                                
+                                
+-- " Background (Vim, GVim)
+-- vim.g.indentLine_bgcolor_term = 202
+-- vim.g.indentLine_bgcolor_gui = '#FF5F00'
